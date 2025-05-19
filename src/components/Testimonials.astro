@@ -1,0 +1,260 @@
+---
+const testimonials = [
+  {
+    quote: "Nexus Technologies transformed our legacy systems into a modern, cloud-based solution. Their team's expertise and dedication to quality delivered exceptional results for our organization.",
+    author: "Robert Johnson",
+    title: "CTO, Global Financial Services",
+    image: "https://images.pexels.com/photos/5378700/pexels-photo-5378700.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+  },
+  {
+    quote: "Working with Nexus was a game-changer for our healthcare platform. They understood our complex requirements and built a secure, compliant solution that exceeded our expectations.",
+    author: "Dr. Emily Carter",
+    title: "Director of Innovation, MedTech Solutions",
+    image: "https://images.pexels.com/photos/3781543/pexels-photo-3781543.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+  },
+  {
+    quote: "The custom logistics system developed by Nexus has increased our operational efficiency by 40% and reduced costs significantly. Their ongoing support and enhancements continue to add value.",
+    author: "Marcus Williams",
+    title: "VP of Operations, Global Logistics Corp",
+    image: "https://images.pexels.com/photos/4069931/pexels-photo-4069931.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+  }
+];
+---
+
+<section id="testimonials" class="section bg-light">
+  <div class="container">
+    <h2 class="section-title text-center" data-aos="fade-up">What Our Clients Say</h2>
+    <p class="section-description text-center" data-aos="fade-up" data-aos-delay="100">
+      Don't just take our word for it—hear from the industry leaders who trust us with their critical systems.
+    </p>
+    
+    <div class="testimonials-slider" data-aos="fade-up" data-aos-delay="200">
+      <div class="testimonials-track">
+        {testimonials.map((testimonial, index) => (
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <div class="quote-icon">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10 11H6C6.50963 7.5 4 8 4 5C4 3.5 5.5 3 6.5 3C8 3 9 4 9 6L10 11ZM22 11H18C18.5096 7.5 16 8 16 5C16 3.5 17.5 3 18.5 3C20 3 21 4 21 6L22 11Z" stroke="#E63946" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M9 11V20C9 20.5523 8.55228 21 8 21H5C4.44772 21 4 20.5523 4 20V13C4 11.8954 4.89543 11 6 11H9ZM21 11V20C21 20.5523 20.5523 21 20 21H17C16.4477 21 16 20.5523 16 20V13C16 11.8954 16.8954 11 18 11H21Z" stroke="#E63946" stroke-width="1.5"/>
+                </svg>
+              </div>
+              <p class="testimonial-quote">{testimonial.quote}</p>
+              <div class="testimonial-author">
+                <img src={testimonial.image} alt={testimonial.author} />
+                <div class="author-info">
+                  <h3>{testimonial.author}</h3>
+                  <span>{testimonial.title}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+      
+      <div class="slider-controls">
+        <button class="slider-arrow prev" aria-label="Previous testimonial">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="slider-dots">
+          {testimonials.map((_, index) => (
+            <button class={`slider-dot ${index === 0 ? 'active' : ''}`} data-index={index} aria-label={`Go to testimonial ${index + 1}`}></button>
+          ))}
+        </div>
+        <button class="slider-arrow next" aria-label="Next testimonial">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .testimonials-slider {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .testimonials-track {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+
+  .testimonial-slide {
+    min-width: 100%;
+    padding: var(--space-2);
+  }
+
+  .testimonial-card {
+    background-color: white;
+    border-radius: var(--radius-md);
+    padding: var(--space-5);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    position: relative;
+  }
+
+  .quote-icon {
+    position: absolute;
+    top: var(--space-4);
+    right: var(--space-4);
+    opacity: 0.2;
+  }
+
+  .testimonial-quote {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: var(--space-4);
+    color: var(--color-neutral-800);
+    position: relative;
+  }
+
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+  }
+
+  .testimonial-author img {
+    width: 60px;
+    height: 60px;
+    border-radius: var(--radius-full);
+    object-fit: cover;
+  }
+
+  .author-info h3 {
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+    color: var(--color-neutral-900);
+  }
+
+  .author-info span {
+    font-size: 0.9rem;
+    color: var(--color-neutral-600);
+  }
+
+  .slider-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: var(--space-4);
+    gap: var(--space-3);
+  }
+
+  .slider-arrow {
+    background: none;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-neutral-700);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .slider-arrow:hover {
+    color: var(--color-primary-500);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  }
+
+  .slider-dots {
+    display: flex;
+    gap: var(--space-1);
+  }
+
+  .slider-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: var(--radius-full);
+    background-color: var(--color-neutral-300);
+    border: none;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+  }
+
+  .slider-dot:hover {
+    background-color: var(--color-neutral-400);
+  }
+
+  .slider-dot.active {
+    background-color: var(--color-primary-500);
+    width: 24px;
+    border-radius: 6px;
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const track = document.querySelector('.testimonials-track');
+    const slides = document.querySelectorAll('.testimonial-slide');
+    const dots = document.querySelectorAll('.slider-dot');
+    const prevButton = document.querySelector('.slider-arrow.prev');
+    const nextButton = document.querySelector('.slider-arrow.next');
+    
+    let currentIndex = 0;
+    const slideCount = slides.length;
+    
+    // Function to update the slide position
+    const updateSlidePosition = () => {
+      if (track) {
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+      }
+      
+      // Update active dot
+      dots.forEach((dot, index) => {
+        if (index === currentIndex) {
+          dot.classList.add('active');
+        } else {
+          dot.classList.remove('active');
+        }
+      });
+    };
+    
+    // Event listeners for dot navigation
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        currentIndex = index;
+        updateSlidePosition();
+      });
+    });
+    
+    // Event listeners for arrows
+    if (prevButton) {
+      prevButton.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + slideCount) % slideCount;
+        updateSlidePosition();
+      });
+    }
+    
+    if (nextButton) {
+      nextButton.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % slideCount;
+        updateSlidePosition();
+      });
+    }
+    
+    // Auto-advance slides
+    const autoAdvance = setInterval(() => {
+      currentIndex = (currentIndex + 1) % slideCount;
+      updateSlidePosition();
+    }, 5000);
+    
+    // Stop auto-advance on interaction
+    const sliderContainer = document.querySelector('.testimonials-slider');
+    if (sliderContainer) {
+      sliderContainer.addEventListener('mouseenter', () => {
+        clearInterval(autoAdvance);
+      });
+    }
+  });
+</script>

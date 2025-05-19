@@ -1,0 +1,169 @@
+---
+---
+
+<section id="about" class="section bg-dark">
+  <div class="container">
+    <div class="about-container">
+      <div class="about-content" data-aos="fade-right">
+        <h2 class="section-title">Who We Are</h2>
+        <p class="about-intro">
+          Founded in 2018, Nexus Technologies has emerged as a leader in enterprise software solutions, 
+          dedicated to transforming how businesses leverage technology to achieve their strategic objectives.
+        </p>
+        <div class="value-points">
+          <div class="value-point">
+            <div class="value-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M22 11.1V6.9C22 3.4 20.6 2 17.1 2H12.9C9.4 2 8 3.4 8 6.9V8H11.1C14.6 8 16 9.4 16 12.9V16H17.1C20.6 16 22 14.6 22 11.1Z" stroke="#E63946" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M16 17.1V12.9C16 9.4 14.6 8 11.1 8H6.9C3.4 8 2 9.4 2 12.9V17.1C2 20.6 3.4 22 6.9 22H11.1C14.6 22 16 20.6 16 17.1Z" stroke="#E63946" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M6.08 15L8.03 16.95L11.92 13.05" stroke="#E63946" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div>
+              <h3>Innovation</h3>
+              <p>We pioneer cutting-edge solutions that propel businesses forward in a rapidly evolving digital landscape.</p>
+            </div>
+          </div>
+          <div class="value-point">
+            <div class="value-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 2V5M16 2V5M3.5 9.09H20.5M21 8.5V17C21 20 19.5 22 16 22H8C4.5 22 3 20 3 17V8.5C3 5.5 4.5 3.5 8 3.5H16C19.5 3.5 21 5.5 21 8.5Z" stroke="#E63946" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M11.995 13.7H12.005M8.294 13.7H8.304M8.294 16.7H8.304" stroke="#E63946" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M11.995 16.7H12.005M15.695 13.7H15.705M15.695 16.7H15.705" stroke="#E63946" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div>
+              <h3>Reliability</h3>
+              <p>We deliver robust, dependable systems that form the backbone of mission-critical business operations.</p>
+            </div>
+          </div>
+          <div class="value-point">
+            <div class="value-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z" stroke="#E63946" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M2 12H9M15 12H22" stroke="#E63946" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 2V9M12 15V22" stroke="#E63946" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div>
+              <h3>Precision</h3>
+              <p>We ensure meticulous attention to detail in every project, guaranteeing solutions that align perfectly with your needs.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about-stats" data-aos="fade-left" data-aos-delay="200">
+        <div class="stat-card">
+          <span class="stat-number">150+</span>
+          <span class="stat-label">Enterprise Clients</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">95%</span>
+          <span class="stat-label">Client Retention</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">300+</span>
+          <span class="stat-label">Projects Delivered</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">40+</span>
+          <span class="stat-label">Industry Experts</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+
+  @media (min-width: 1024px) {
+    .about-container {
+      grid-template-columns: 3fr 2fr;
+      gap: var(--space-8);
+      align-items: center;
+    }
+  }
+
+  .about-intro {
+    font-size: 1.25rem;
+    margin-bottom: var(--space-5);
+    opacity: 0.9;
+  }
+
+  .value-points {
+    display: grid;
+    gap: var(--space-4);
+  }
+
+  .value-point {
+    display: flex;
+    gap: var(--space-3);
+  }
+
+  .value-icon {
+    flex-shrink: 0;
+    height: 48px;
+    width: 48px;
+    border-radius: var(--radius-md);
+    background-color: rgba(230, 57, 70, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .value-point h3 {
+    font-size: 1.2rem;
+    margin-bottom: var(--space-1);
+    color: white;
+  }
+
+  .value-point p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1rem;
+  }
+
+  .about-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-3);
+  }
+
+  .stat-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius-md);
+    padding: var(--space-3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: transform var(--transition-normal), background-color var(--transition-normal);
+  }
+
+  .stat-card:hover {
+    background-color: rgba(230, 57, 70, 0.15);
+    transform: translateY(-5px);
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-primary-500);
+    line-height: 1.2;
+  }
+
+  .stat-label {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: var(--space-1);
+  }
+
+  .bg-dark .section-title::after {
+    background-color: var(--color-primary-500);
+  }
+</style>

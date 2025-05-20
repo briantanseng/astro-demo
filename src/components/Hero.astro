@@ -24,23 +24,34 @@
 </section>
 
 <script>
+  let vantaEffect;
+
   window.addEventListener('load', () => {
     if (typeof VANTA !== 'undefined') {
-      VANTA.FOG({
+      vantaEffect = VANTA.FOG({
         el: "#vanta-bg",
         mouseControls: true,
         touchControls: true,
         gyroControls: false,
+        minHeight: 700,
+        minWidth: 200,
         highlightColor: 0x000000,
         midtoneColor: 0xCCCCCC,
         lowlightColor: 0xEFEFEF,
         baseColor: 0xFFFFFF,
         blurFactor: 0.5,
         speed: 1.5,
-        zoom: -1.0,
+        zoom: 1.0,
         scale: 2,
         scaleMobile: 4
       });
+    }
+  });
+
+  // Cleanup
+  document.addEventListener('astro:before-swap', () => {
+    if (vantaEffect) {
+      vantaEffect.destroy();
     }
   });
 </script>

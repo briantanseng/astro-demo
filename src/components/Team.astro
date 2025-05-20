@@ -3,22 +3,26 @@ const team = [
   {
     name: "Sarah Mitchell",
     role: "Chief Executive Officer",
-    bio: "Sarah brings over 20 years of experience in software development and business leadership."
+    bio: "Sarah brings over 20 years of experience in software development and business leadership.",
+    image: "https://images.pexels.com/photos/5792641/pexels-photo-5792641.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
   },
   {
     name: "Michael Chen",
     role: "Chief Technology Officer",
-    bio: "Michael has led technical strategy for Fortune 500 companies and cutting-edge startups alike."
+    bio: "Michael has led technical strategy for Fortune 500 companies and cutting-edge startups alike.",
+    image: "https://images.pexels.com/photos/5792600/pexels-photo-5792600.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
   },
   {
     name: "James Wilson",
     role: "Head of Software Architecture",
-    bio: "James specializes in designing scalable, resilient systems for complex enterprise environments."
+    bio: "James specializes in designing scalable, resilient systems for complex enterprise environments.",
+    image: "https://images.pexels.com/photos/5682847/pexels-photo-5682847.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
   },
   {
     name: "Elena Rodriguez",
     role: "VP of Client Success",
-    bio: "Elena ensures our solutions deliver exceptional value and exceed client expectations."
+    bio: "Elena ensures our solutions deliver exceptional value and exceed client expectations.",
+    image: "https://images.pexels.com/photos/5717641/pexels-photo-5717641.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
   }
 ];
 ---
@@ -34,15 +38,13 @@ const team = [
       {team.map((member, index) => (
         <div class="team-member" data-aos="fade-up" data-aos-delay={150 + (index * 50)}>
           <div class="member-image">
-            <div class="illustration">
-              <div class="illustration-avatar"></div>
-            </div>
+            <img src={member.image} alt={member.name} />
             <div class="member-social">
               <a href="#" aria-label="LinkedIn">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M16 8C17.5913 8 19.1174 8.63214 20.2426 9.75736C21.3679 10.8826 22 12.4087 22 14V21H18V14C18 13.4696 17.7893 12.9609 17.4142 12.5858C17.0391 12.2107 16.5304 12 16 12C15.4696 12 14.9609 12.2107 14.5858 12.5858C14.2107 12.9609 14 13.4696 14 14V21H10V14C10 12.4087 10.6321 10.8826 11.7574 9.75736C12.8826 8.63214 14.4087 8 16 8Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M6 9H2V21H6V9Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M4 6C5.10457 6 6 5.10457 6 4C6 2.89543 5.10457 2 4 2C2.89543 2 2 2.89543 2 4C2 5.10457 2.89543 6 4 6Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M16 8C17.5913 8 19.1174 8.63214 20.2426 9.75736C21.3679 10.8826 22 12.4087 22 14V21H18V14C18 13.4696 17.7893 12.9609 17.4142 12.5858C17.0391 12.2107 16.5304 12 16 12C15.4696 12 14.9609 12.2107 14.5858 12.5858C14.2107 12.9609 14 13.4696 14 14V21H10V14C10 12.4087 10.6321 10.8826 11.7574 9.75736C12.8826 8.63214 14.4087 8 16 8Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M6 9H2V21H6V9Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M4 6C5.10457 6 6 5.10457 6 4C6 2.89543 5.10457 2 4 2C2.89543 2 2 2.89543 2 4C2 5.10457 2.89543 6 4 6Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </a>
             </div>
@@ -78,7 +80,7 @@ const team = [
   }
 
   .team-member {
-    background-color: var(--color-neutral-600);
+    background-color: rgba(255, 255, 255, 0.05);
     border-radius: var(--radius-md);
     overflow: hidden;
     transition: transform var(--transition-normal);
@@ -94,32 +96,15 @@ const team = [
     overflow: hidden;
   }
 
-  .illustration {
+  .member-image img {
     width: 100%;
     height: 100%;
-    background-color: var(--color-neutral-400);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    object-fit: cover;
+    transition: transform var(--transition-normal);
   }
 
-  .illustration-avatar {
-    width: 120px;
-    height: 120px;
-    background-color: var(--color-neutral-200);
-    border-radius: 50%;
-    position: relative;
-  }
-
-  .illustration-avatar::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 50%;
-    bottom: 0;
-    left: 0;
-    background-color: var(--color-neutral-300);
-    border-radius: 0 0 60px 60px;
+  .team-member:hover .member-image img {
+    transform: scale(1.05);
   }
 
   .member-social {
@@ -138,7 +123,6 @@ const team = [
     height: 36px;
     background-color: var(--color-primary-500);
     border-radius: var(--radius-full);
-    color: var(--color-neutral-50);
     transition: background-color var(--transition-fast);
   }
 
@@ -153,7 +137,7 @@ const team = [
   .member-info h3 {
     font-size: 1.2rem;
     margin-bottom: 4px;
-    color: var(--color-neutral-50);
+    color: white;
   }
 
   .member-role {
@@ -165,7 +149,7 @@ const team = [
 
   .member-info p {
     font-size: 0.95rem;
-    color: var(--color-neutral-200);
+    color: rgba(255, 255, 255, 0.7);
     margin: 0;
   }
 
@@ -174,6 +158,6 @@ const team = [
   }
 
   .bg-dark .section-description {
-    color: var(--color-neutral-200);
+    color: rgba(255, 255, 255, 0.7);
   }
 </style>

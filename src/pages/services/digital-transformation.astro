@@ -1,0 +1,47 @@
+---
+import ServiceLayout from '../../layouts/ServiceLayout.astro';
+
+const service = {
+  name: "Digital Transformation",
+  icon: "transform",
+  intro: "Modernize your business operations and unlock new opportunities through comprehensive digital transformation strategies.",
+  benefits: [
+    {
+      title: "Increased Efficiency",
+      description: "Streamline operations and automate manual processes for better productivity."
+    },
+    {
+      title: "Enhanced Customer Experience",
+      description: "Deliver superior digital experiences that meet modern customer expectations."
+    },
+    {
+      title: "Data-Driven Insights",
+      description: "Leverage data analytics to make informed business decisions."
+    }
+  ],
+  features: [
+    {
+      title: "Process Digitization",
+      description: "Convert manual processes into efficient digital workflows."
+    },
+    {
+      title: "Digital Strategy",
+      description: "Comprehensive roadmap for digital transformation initiatives."
+    },
+    {
+      title: "Change Management",
+      description: "Support for organizational adaptation to digital changes."
+    },
+    {
+      title: "Technology Implementation",
+      description: "Deployment of modern digital tools and platforms."
+    }
+  ]
+};
+---
+
+<ServiceLayout 
+  title="Digital Transformation | 98Labs"
+  description="Transform your business for the digital age. Our digital transformation services help organizations modernize, innovate, and compete effectively."
+  service={service}
+/>

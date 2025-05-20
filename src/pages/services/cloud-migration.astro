@@ -1,0 +1,47 @@
+---
+import ServiceLayout from '../../layouts/ServiceLayout.astro';
+
+const service = {
+  name: "Cloud Migration & DevOps",
+  icon: "cloud",
+  intro: "Accelerate your business with seamless cloud migration and modern DevOps practices that enhance efficiency and scalability.",
+  benefits: [
+    {
+      title: "Cost Optimization",
+      description: "Reduce infrastructure costs and optimize resource utilization."
+    },
+    {
+      title: "Improved Scalability",
+      description: "Easily scale resources up or down based on demand."
+    },
+    {
+      title: "Enhanced Security",
+      description: "Implement robust security measures and compliance standards."
+    }
+  ],
+  features: [
+    {
+      title: "Cloud Strategy",
+      description: "Tailored cloud adoption and migration planning."
+    },
+    {
+      title: "Infrastructure as Code",
+      description: "Automated infrastructure deployment and management."
+    },
+    {
+      title: "CI/CD Implementation",
+      description: "Streamlined development and deployment pipelines."
+    },
+    {
+      title: "Performance Monitoring",
+      description: "Comprehensive monitoring and optimization solutions."
+    }
+  ]
+};
+---
+
+<ServiceLayout 
+  title="Cloud Migration & DevOps | 98Labs"
+  description="Transform your infrastructure with our cloud migration and DevOps services. Achieve scalability, efficiency, and continuous delivery."
+  service={service}
+/>

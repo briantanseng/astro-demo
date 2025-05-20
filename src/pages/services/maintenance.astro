@@ -1,0 +1,47 @@
+---
+import ServiceLayout from '../../layouts/ServiceLayout.astro';
+
+const service = {
+  name: "Maintenance & Support",
+  icon: "support",
+  intro: "Ensure your systems run smoothly with comprehensive maintenance and support services that optimize performance and minimize downtime.",
+  benefits: [
+    {
+      title: "Reduced Downtime",
+      description: "Proactive maintenance to prevent system failures."
+    },
+    {
+      title: "Performance Optimization",
+      description: "Continuous monitoring and optimization of systems."
+    },
+    {
+      title: "Peace of Mind",
+      description: "24/7 support from experienced technical teams."
+    }
+  ],
+  features: [
+    {
+      title: "Preventive Maintenance",
+      description: "Regular system checks and updates to prevent issues."
+    },
+    {
+      title: "Technical Support",
+      description: "Dedicated support team for issue resolution."
+    },
+    {
+      title: "System Updates",
+      description: "Regular updates and security patches deployment."
+    },
+    {
+      title: "Performance Monitoring",
+      description: "Continuous monitoring of system health and performance."
+    }
+  ]
+};
+---
+
+<ServiceLayout 
+  title="Maintenance & Support | 98Labs"
+  description="Keep your systems running optimally with our comprehensive maintenance and support services. Expert assistance and proactive care for your technology."
+  service={service}
+/>

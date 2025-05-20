@@ -1,0 +1,47 @@
+---
+import ServiceLayout from '../../layouts/ServiceLayout.astro';
+
+const service = {
+  name: "Data Analytics & AI",
+  icon: "analytics",
+  intro: "Unlock the power of your data with advanced analytics and AI solutions that drive intelligent decision-making and business growth.",
+  benefits: [
+    {
+      title: "Data-Driven Decisions",
+      description: "Make informed decisions based on accurate data insights."
+    },
+    {
+      title: "Predictive Analytics",
+      description: "Anticipate trends and opportunities with advanced forecasting."
+    },
+    {
+      title: "Process Automation",
+      description: "Automate routine tasks with AI-powered solutions."
+    }
+  ],
+  features: [
+    {
+      title: "Data Strategy",
+      description: "Comprehensive data collection and management planning."
+    },
+    {
+      title: "Machine Learning",
+      description: "Custom ML models for specific business needs."
+    },
+    {
+      title: "Business Intelligence",
+      description: "Interactive dashboards and reporting solutions."
+    },
+    {
+      title: "AI Integration",
+      description: "Integration of AI capabilities into existing systems."
+    }
+  ]
+};
+---
+
+<ServiceLayout 
+  title="Data Analytics & AI | 98Labs"
+  description="Transform your business with advanced data analytics and AI solutions. Extract valuable insights and automate processes for improved efficiency."
+  service={service}
+/>

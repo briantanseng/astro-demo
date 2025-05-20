@@ -1,0 +1,47 @@
+---
+import ServiceLayout from '../../layouts/ServiceLayout.astro';
+
+const service = {
+  name: "Custom Software Development",
+  icon: "code",
+  intro: "Transform your business with tailored software solutions designed specifically for your unique needs and challenges.",
+  benefits: [
+    {
+      title: "Tailored Solutions",
+      description: "Custom-built software that perfectly aligns with your business processes and objectives."
+    },
+    {
+      title: "Scalable Architecture",
+      description: "Future-proof solutions that grow with your business and adapt to changing needs."
+    },
+    {
+      title: "Competitive Advantage",
+      description: "Gain an edge over competitors with unique solutions that differentiate your business."
+    }
+  ],
+  features: [
+    {
+      title: "Full-Stack Development",
+      description: "End-to-end development services covering both frontend and backend systems."
+    },
+    {
+      title: "API Integration",
+      description: "Seamless integration with third-party services and existing systems."
+    },
+    {
+      title: "Quality Assurance",
+      description: "Rigorous testing and quality control throughout the development lifecycle."
+    },
+    {
+      title: "Ongoing Support",
+      description: "Continuous maintenance and support to ensure optimal performance."
+    }
+  ]
+};
+---
+
+<ServiceLayout 
+  title="Custom Software Development | 98Labs"
+  description="Transform your business with custom software solutions tailored to your specific needs. Our expert team delivers scalable, innovative applications that drive growth."
+  service={service}
+/>

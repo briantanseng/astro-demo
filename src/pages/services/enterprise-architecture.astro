@@ -1,0 +1,47 @@
+---
+import ServiceLayout from '../../layouts/ServiceLayout.astro';
+
+const service = {
+  name: "Enterprise Architecture",
+  icon: "architecture",
+  intro: "Build robust, scalable systems that align with your business goals and support future growth through strategic enterprise architecture.",
+  benefits: [
+    {
+      title: "Strategic Alignment",
+      description: "Ensure IT systems and infrastructure perfectly align with business objectives."
+    },
+    {
+      title: "Reduced Complexity",
+      description: "Streamline systems and eliminate redundancies for improved efficiency."
+    },
+    {
+      title: "Future-Ready",
+      description: "Prepare your organization for future growth and technological advancement."
+    }
+  ],
+  features: [
+    {
+      title: "Architecture Assessment",
+      description: "Comprehensive evaluation of current systems and infrastructure."
+    },
+    {
+      title: "Technology Roadmap",
+      description: "Strategic planning for future technology implementations and upgrades."
+    },
+    {
+      title: "Integration Strategy",
+      description: "Seamless integration of systems and applications across the enterprise."
+    },
+    {
+      title: "Security Architecture",
+      description: "Robust security frameworks to protect critical business assets."
+    }
+  ]
+};
+---
+
+<ServiceLayout 
+  title="Enterprise Architecture | 98Labs"
+  description="Transform your organization with strategic enterprise architecture solutions. Build scalable, efficient systems that drive business success."
+  service={service}
+/>

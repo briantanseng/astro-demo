@@ -1,5 +1,6 @@
 ---
 import Layout from './Layout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
 
 interface Props {
   title: string;
@@ -14,10 +15,18 @@ interface Props {
 }
 
 const { title, description, service } = Astro.props;
+
+const breadcrumbItems = [
+  { label: 'Home', href: '/' },
+  { label: 'Services', href: '/#services' },
+  { label: service.name, href: Astro.url.pathname }
+];
 ---
 
 <Layout title={title} description={description}>
   <div class="service-page">
+    <Breadcrumbs items={breadcrumbItems} />
+    
     <header class="service-header">
       <div class="container">
         <h1>{service.name}</h1>
@@ -65,7 +74,7 @@ const { title, description, service } = Astro.props;
 
 <style>
   .service-header {
-    padding: calc(var(--space-8) * 2) 0 var(--space-8);
+    padding: calc(var(--space-8) * 1.5) 0 var(--space-8);
     background-color: var(--color-neutral-700);
     color: white;
   }

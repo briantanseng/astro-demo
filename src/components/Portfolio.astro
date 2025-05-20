@@ -5,42 +5,72 @@ const projects = [
     title: "Enterprise Resource Planning System",
     category: "Software Architecture",
     description: "A comprehensive ERP solution for a multinational manufacturing company, streamlining operations across 12 countries.",
-    image: "https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    image: "https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg",
+    link: "/work/erp-system"
   },
   {
     id: 2,
     title: "Healthcare Data Management Platform",
     category: "Data Solutions",
     description: "HIPAA-compliant healthcare data platform serving over 50 hospitals and medical facilities.",
-    image: "https://images.pexels.com/photos/8439735/pexels-photo-8439735.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    image: "https://images.pexels.com/photos/8439735/pexels-photo-8439735.jpeg",
+    link: "/work/healthcare-platform"
   },
   {
     id: 3,
     title: "FinTech Payment Processing System",
     category: "Financial Technology",
     description: "Secure, high-throughput payment processing solution handling $2B in annual transactions.",
-    image: "https://images.pexels.com/photos/8370752/pexels-photo-8370752.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    image: "https://images.pexels.com/photos/8370752/pexels-photo-8370752.jpeg",
+    link: "/work/fintech-payment"
   },
   {
     id: 4,
     title: "Logistics Management System",
     category: "Supply Chain",
     description: "Real-time tracking and logistics optimization platform for a global shipping enterprise.",
-    image: "https://images.pexels.com/photos/7648080/pexels-photo-7648080.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    image: "https://images.pexels.com/photos/7648080/pexels-photo-7648080.jpeg",
+    link: "/work/logistics-system"
   },
   {
     id: 5,
     title: "Retail Analytics Dashboard",
     category: "Data Solutions",
     description: "AI-powered retail analytics platform providing actionable insights for inventory management and customer behavior.",
-    image: "https://images.pexels.com/photos/5412270/pexels-photo-5412270.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    image: "https://images.pexels.com/photos/5412270/pexels-photo-5412270.jpeg",
+    link: "/work/retail-analytics"
   },
   {
     id: 6,
     title: "Cloud Migration Strategy",
     category: "Cloud Architecture",
     description: "Complete cloud migration for a legacy insurance system, reducing operational costs by 35%.",
-    image: "https://images.pexels.com/photos/4348404/pexels-photo-4348404.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    image: "https://images.pexels.com/photos/4348404/pexels-photo-4348404.jpeg",
+    link: "/work/cloud-migration"
+  },
+  {
+    id: 7,
+    title: "Smart City IoT Platform",
+    category: "IoT Solutions",
+    description: "Integrated IoT platform managing smart city infrastructure including lighting, parking, and waste management.",
+    image: "https://images.pexels.com/photos/1732414/pexels-photo-1732414.jpeg",
+    link: "/work/smart-city"
+  },
+  {
+    id: 8,
+    title: "E-Learning Management System",
+    category: "Education Technology",
+    description: "Comprehensive learning platform serving over 100,000 students with personalized learning paths.",
+    image: "https://images.pexels.com/photos/5905709/pexels-photo-5905709.jpeg",
+    link: "/work/elearning-system"
+  },
+  {
+    id: 9,
+    title: "Supply Chain Optimization",
+    category: "Supply Chain",
+    description: "AI-driven supply chain optimization platform reducing inventory costs by 25% for retail clients.",
+    image: "https://images.pexels.com/photos/4481259/pexels-photo-4481259.jpeg",
+    link: "/work/supply-chain"
   }
 ];
 
@@ -64,9 +94,9 @@ const categories = ["All", ...new Set(projects.map(project => project.category))
       {projects.map((project, index) => (
         <div class="portfolio-item" data-category={project.category} data-aos="fade-up" data-aos-delay={150 + (index * 50)}>
           <div class="portfolio-image">
-            <img src={project.image} alt={project.title} />
+            <img src={project.image} alt={project.title} loading="lazy" />
             <div class="portfolio-overlay">
-              <a href="#contact" class="btn btn-primary">View Details</a>
+              <a href={project.link} class="btn btn-primary">View Details</a>
             </div>
           </div>
           <div class="portfolio-content">

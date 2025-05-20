@@ -2,7 +2,7 @@
 ---
 
 <section class="hero-section">
-  <div id="particles-js" class="particles-container"></div>
+  <div id="vanta-bg" class="vanta-background"></div>
   <div class="hero-content">
     <div class="container">
       <div class="hero-text" data-aos="fade-up" data-aos-delay="200">
@@ -23,84 +23,21 @@
   </div>
 </section>
 
-<script is:inline src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.162.0/three.min.js"></script>
+<script is:inline src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.fog.min.js"></script>
 <script is:inline>
   window.addEventListener('load', () => {
-    particlesJS('particles-js', {
-      particles: {
-        number: {
-          value: 80,
-          density: {
-            enable: true,
-            value_area: 800
-          }
-        },
-        color: {
-          value: '#999999'
-        },
-        shape: {
-          type: 'circle'
-        },
-        opacity: {
-          value: 0.5,
-          random: false,
-          anim: {
-            enable: false
-          }
-        },
-        size: {
-          value: 3,
-          random: true,
-          anim: {
-            enable: false
-          }
-        },
-        line_linked: {
-          enable: true,
-          distance: 150,
-          color: '#cccccc',
-          opacity: 0.4,
-          width: 1
-        },
-        move: {
-          enable: true,
-          speed: 2,
-          direction: 'none',
-          random: false,
-          straight: false,
-          out_mode: 'out',
-          bounce: false,
-          attract: {
-            enable: false
-          }
-        }
-      },
-      interactivity: {
-        detect_on: 'canvas',
-        events: {
-          onhover: {
-            enable: true,
-            mode: 'grab'
-          },
-          onclick: {
-            enable: true,
-            mode: 'push'
-          },
-          resize: true
-        },
-        modes: {
-          grab: {
-            distance: 140,
-            line_linked: {
-              opacity: 1
-            }
-          },
-          push: {
-            particles_nb: 4
-          }
-        }
-      },
-      retina_detect: true
+    VANTA.FOG({
+      el: "#vanta-bg",
+      highlightColor: 0x000000,
+      midtoneColor: 0xCCCCCC,
+      lowlightColor: 0xEFEFEF,
+      baseColor: 0xFFFFFF,
+      blurFactor: 0.5,
+      speed: 1.5,
+      zoom: -1.0,
+      scale: 2,
+      scaleMobile: 4
     });
   });
 </script>
@@ -112,13 +49,12 @@
     min-height: 700px;
     width: 100%;
     color: var(--color-neutral-700);
-    background-color: var(--color-neutral-50);
     overflow: hidden;
     display: flex;
     align-items: center;
   }
 
-  .particles-container {
+  .vanta-background {
     position: absolute;
     top: 0;
     left: 0;

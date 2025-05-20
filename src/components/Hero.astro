@@ -24,7 +24,7 @@
   <div class="scroll-indicator">
     <span>Scroll</span>
     <svg width="16" height="24" viewBox="0 0 16 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M8 0V20M8 20L1 13M8 20L15 13" stroke="white" stroke-width="2"/>
+      <path d="M8 0V20M8 20L1 13M8 20L15 13" stroke="currentColor" stroke-width="2"/>
     </svg>
   </div>
 </section>
@@ -35,8 +35,8 @@
     height: 100vh;
     min-height: 700px;
     width: 100%;
-    color: white;
-    background-color: var(--color-neutral-900);
+    color: var(--color-neutral-700);
+    background-color: var(--color-neutral-50);
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -93,7 +93,7 @@
     right: -10%;
     width: 600px;
     height: 600px;
-    background: linear-gradient(135deg, var(--color-primary-500), var(--color-primary-700));
+    background: linear-gradient(135deg, var(--color-neutral-200), var(--color-neutral-400));
     animation: float 30s infinite alternate ease-in-out;
   }
 
@@ -102,7 +102,7 @@
     left: -10%;
     width: 500px;
     height: 500px;
-    background: linear-gradient(135deg, var(--color-primary-400), var(--color-primary-600));
+    background: linear-gradient(135deg, var(--color-neutral-400), var(--color-neutral-600));
     animation: float 25s infinite alternate-reverse ease-in-out;
   }
 
@@ -111,7 +111,7 @@
     left: 60%;
     width: 300px;
     height: 300px;
-    background: var(--color-primary-500);
+    background: var(--color-neutral-300);
     animation: float 20s infinite alternate ease-in-out;
   }
 
@@ -127,6 +127,7 @@
     opacity: 0.7;
     animation: bounce 2s infinite;
     cursor: pointer;
+    color: var(--color-neutral-700);
   }
 
   .scroll-indicator span {

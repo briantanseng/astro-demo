@@ -4,15 +4,8 @@
 <header class="site-header">
   <div class="container">
     <div class="header-content">
-      <a href="/" class="logo" aria-label="Nexus Technologies home">
-        <svg width="180" height="40" viewBox="0 0 180 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M10 8L22 32H30L18 8H10Z" fill="#E63946"/>
-          <path d="M40 8H32L20 32H28L40 8Z" fill="#E63946"/>
-          <path d="M50 8H58V32H50V8Z" fill="#E63946"/>
-          <path d="M72 8H64V32H84V26H72V8Z" fill="#121212"/>
-          <path d="M88 8H96V14H104V8H112V32H104V20H96V32H88V8Z" fill="#121212"/>
-          <path d="M124 8H132L140 20V8H148V32H140L132 20V32H124V8Z" fill="#121212"/>
-        </svg>
+      <a href="/" class="logo" aria-label="98Labs home">
+        <span class="logo-text">98Labs</span>
       </a>
       
       <nav class="main-nav">
@@ -42,7 +35,7 @@
     left: 0;
     width: 100%;
     z-index: var(--z-nav);
-    background-color: rgba(18, 18, 18, 0.95);
+    background-color: rgba(67, 67, 67, 0.95);
     backdrop-filter: blur(8px);
     transition: background-color var(--transition-normal);
   }
@@ -61,6 +54,13 @@
 
   .logo:hover {
     transform: scale(1.02);
+  }
+
+  .logo-text {
+    font-family: var(--font-family-logo);
+    font-weight: bold;
+    font-size: 1.8rem;
+    color: var(--color-primary-500);
   }
 
   .main-nav {
@@ -145,7 +145,7 @@
       right: 0;
       width: 250px;
       height: 100vh;
-      background-color: var(--color-neutral-900);
+      background-color: var(--color-neutral-700);
       flex-direction: column;
       justify-content: center;
       gap: var(--space-4);
